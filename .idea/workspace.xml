@@ -35,8 +35,8 @@
       <recent name="C:\Users\ChenZixuan\Desktop\few-shot-image-classification\meta-transfer-learning\utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mtl_meta_train_resnet12_miniimagenet_5_shot">
-    <configuration name="mtl_meta_eval" type="PythonConfigurationType" factoryName="Python">
+  <component name="RunManager" selected="Python.mtl_meta_eval_resnet12_miniimagenet_5_shot">
+    <configuration name="mtl_meta_eval_resnet12_miniimagenet_5_shot" type="PythonConfigurationType" factoryName="Python">
       <module name="few-shot-image-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -50,7 +50,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/meta-transfer-learning/main.py" />
-      <option name="PARAMETERS" value="--phase meta_eval" />
+      <option name="PARAMETERS" value="--phase meta_eval --dataset FC100 --shot 5 --model_type ResNet --pre_batch_size 128 --pre_lr 0.1" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -170,7 +170,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.mtl_meta_train_resnet12_miniimagenet_5_shot" />
-      <item itemvalue="Python.mtl_meta_eval" />
+      <item itemvalue="Python.mtl_meta_eval_resnet12_miniimagenet_5_shot" />
       <item itemvalue="Python.mtl_pre" />
       <item itemvalue="Python.resnet12_mtl" />
       <item itemvalue="Python.resnet_mtl" />
@@ -201,7 +201,7 @@
       <workItem from="1607846026889" duration="8643000" />
       <workItem from="1607943881150" duration="872000" />
       <workItem from="1608115598258" duration="1240000" />
-      <workItem from="1608185332664" duration="23040000" />
+      <workItem from="1608185332664" duration="24754000" />
     </task>
     <servers />
   </component>
@@ -213,13 +213,14 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="371" y="106" key="#Options/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1607591506974" />
-    <state x="84" y="76" width="1086" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608211729062">
+    <state x="105" y="15" width="1086" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608213496541">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="-2783" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2880.156.1440.870/0.0.2560.1400@-2880.156.1440.870" timestamp="1607818500981" />
     <state x="1022" y="528" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2880.156.1440.870/0.0.2560.1400@0.0.2560.1400" timestamp="1607747648669" />
-    <state x="84" y="76" width="1086" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211729062" />
+    <state x="105" y="15" width="1086" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608213496541" />
     <state x="3009" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860/2880.0.1920.1080@2880.0.1920.1080" timestamp="1607863307945" />
+    <state x="84" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1608212067815" />
     <state x="3570" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607861941777">
       <screen x="2880" y="0" width="1920" height="1080" />
     </state>
@@ -237,68 +238,68 @@
     </state>
     <state x="892" y="303" key="FileChooserDialogImpl/-2880.156.1440.870/0.0.2560.1400@0.0.2560.1400" timestamp="1607747563995" />
     <state x="502" y="186" key="FileChooserDialogImpl/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1607769083759" />
-    <state width="1398" height="370" key="GridCell.Tab.0.bottom" timestamp="1608211749607">
+    <state width="1398" height="370" key="GridCell.Tab.0.bottom" timestamp="1608213392278">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1398" height="419" key="GridCell.Tab.0.bottom/-2880.156.1440.870/0.0.2560.1400@-2880.156.1440.870" timestamp="1607831531879" />
     <state width="2518" height="567" key="GridCell.Tab.0.bottom/-2880.156.1440.870/0.0.2560.1400@0.0.2560.1400" timestamp="1607747922428" />
-    <state width="1398" height="370" key="GridCell.Tab.0.bottom/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211749607" />
+    <state width="1398" height="370" key="GridCell.Tab.0.bottom/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608213392278" />
     <state width="1877" height="518" key="GridCell.Tab.0.bottom/0.0.1440.860/2880.0.1920.1080@2880.0.1920.1080" timestamp="1607944159084" />
     <state width="1398" height="428" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1607730006634" />
-    <state width="1398" height="370" key="GridCell.Tab.0.center" timestamp="1608211749607">
+    <state width="1398" height="370" key="GridCell.Tab.0.center" timestamp="1608213392278">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1398" height="419" key="GridCell.Tab.0.center/-2880.156.1440.870/0.0.2560.1400@-2880.156.1440.870" timestamp="1607831531879" />
     <state width="2518" height="567" key="GridCell.Tab.0.center/-2880.156.1440.870/0.0.2560.1400@0.0.2560.1400" timestamp="1607747922428" />
-    <state width="1398" height="370" key="GridCell.Tab.0.center/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211749607" />
+    <state width="1398" height="370" key="GridCell.Tab.0.center/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608213392278" />
     <state width="1877" height="518" key="GridCell.Tab.0.center/0.0.1440.860/2880.0.1920.1080@2880.0.1920.1080" timestamp="1607944159084" />
     <state width="1398" height="428" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1607730006634" />
-    <state width="1398" height="370" key="GridCell.Tab.0.left" timestamp="1608211749607">
+    <state width="1398" height="370" key="GridCell.Tab.0.left" timestamp="1608213392278">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1398" height="419" key="GridCell.Tab.0.left/-2880.156.1440.870/0.0.2560.1400@-2880.156.1440.870" timestamp="1607831531879" />
     <state width="2518" height="567" key="GridCell.Tab.0.left/-2880.156.1440.870/0.0.2560.1400@0.0.2560.1400" timestamp="1607747922428" />
-    <state width="1398" height="370" key="GridCell.Tab.0.left/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211749607" />
+    <state width="1398" height="370" key="GridCell.Tab.0.left/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608213392278" />
     <state width="1877" height="518" key="GridCell.Tab.0.left/0.0.1440.860/2880.0.1920.1080@2880.0.1920.1080" timestamp="1607944159084" />
     <state width="1398" height="428" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1607730006634" />
-    <state width="1398" height="370" key="GridCell.Tab.0.right" timestamp="1608211749607">
+    <state width="1398" height="370" key="GridCell.Tab.0.right" timestamp="1608213392278">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1398" height="419" key="GridCell.Tab.0.right/-2880.156.1440.870/0.0.2560.1400@-2880.156.1440.870" timestamp="1607831531879" />
     <state width="2518" height="567" key="GridCell.Tab.0.right/-2880.156.1440.870/0.0.2560.1400@0.0.2560.1400" timestamp="1607747922428" />
-    <state width="1398" height="370" key="GridCell.Tab.0.right/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211749607" />
+    <state width="1398" height="370" key="GridCell.Tab.0.right/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608213392278" />
     <state width="1877" height="518" key="GridCell.Tab.0.right/0.0.1440.860/2880.0.1920.1080@2880.0.1920.1080" timestamp="1607944159084" />
     <state width="1398" height="428" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1607730006634" />
-    <state width="1398" height="370" key="GridCell.Tab.1.bottom" timestamp="1608211749607">
+    <state width="1398" height="370" key="GridCell.Tab.1.bottom" timestamp="1608213392154">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1398" height="451" key="GridCell.Tab.1.bottom/-2880.156.1440.870/0.0.2560.1400@-2880.156.1440.870" timestamp="1607818863574" />
     <state width="2518" height="567" key="GridCell.Tab.1.bottom/-2880.156.1440.870/0.0.2560.1400@0.0.2560.1400" timestamp="1607747922428" />
-    <state width="1398" height="370" key="GridCell.Tab.1.bottom/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211749607" />
+    <state width="1398" height="370" key="GridCell.Tab.1.bottom/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608213392154" />
     <state width="1877" height="558" key="GridCell.Tab.1.bottom/0.0.1440.860/2880.0.1920.1080@2880.0.1920.1080" timestamp="1607870074600" />
     <state width="1398" height="428" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1607730006634" />
-    <state width="1398" height="370" key="GridCell.Tab.1.center" timestamp="1608211749607">
+    <state width="1398" height="370" key="GridCell.Tab.1.center" timestamp="1608213392154">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1398" height="451" key="GridCell.Tab.1.center/-2880.156.1440.870/0.0.2560.1400@-2880.156.1440.870" timestamp="1607818863574" />
     <state width="2518" height="567" key="GridCell.Tab.1.center/-2880.156.1440.870/0.0.2560.1400@0.0.2560.1400" timestamp="1607747922428" />
-    <state width="1398" height="370" key="GridCell.Tab.1.center/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211749607" />
+    <state width="1398" height="370" key="GridCell.Tab.1.center/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608213392154" />
     <state width="1877" height="558" key="GridCell.Tab.1.center/0.0.1440.860/2880.0.1920.1080@2880.0.1920.1080" timestamp="1607870074599" />
     <state width="1398" height="428" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1607730006634" />
-    <state width="1398" height="370" key="GridCell.Tab.1.left" timestamp="1608211749607">
+    <state width="1398" height="370" key="GridCell.Tab.1.left" timestamp="1608213392154">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1398" height="451" key="GridCell.Tab.1.left/-2880.156.1440.870/0.0.2560.1400@-2880.156.1440.870" timestamp="1607818863574" />
     <state width="2518" height="567" key="GridCell.Tab.1.left/-2880.156.1440.870/0.0.2560.1400@0.0.2560.1400" timestamp="1607747922428" />
-    <state width="1398" height="370" key="GridCell.Tab.1.left/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211749607" />
+    <state width="1398" height="370" key="GridCell.Tab.1.left/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608213392154" />
     <state width="1877" height="558" key="GridCell.Tab.1.left/0.0.1440.860/2880.0.1920.1080@2880.0.1920.1080" timestamp="1607870074599" />
     <state width="1398" height="428" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1607730006634" />
-    <state width="1398" height="370" key="GridCell.Tab.1.right" timestamp="1608211749607">
+    <state width="1398" height="370" key="GridCell.Tab.1.right" timestamp="1608213392154">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1398" height="451" key="GridCell.Tab.1.right/-2880.156.1440.870/0.0.2560.1400@-2880.156.1440.870" timestamp="1607818863574" />
     <state width="2518" height="567" key="GridCell.Tab.1.right/-2880.156.1440.870/0.0.2560.1400@0.0.2560.1400" timestamp="1607747922428" />
-    <state width="1398" height="370" key="GridCell.Tab.1.right/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211749607" />
+    <state width="1398" height="370" key="GridCell.Tab.1.right/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608213392154" />
     <state width="1877" height="558" key="GridCell.Tab.1.right/0.0.1440.860/2880.0.1920.1080@2880.0.1920.1080" timestamp="1607870074600" />
     <state width="1398" height="428" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1607730006634" />
     <state x="222" y="75" key="SettingsEditor" timestamp="1608209211015">
@@ -330,10 +331,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="275" y="0" width="1177" height="846" key="dock-window-3/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608208179908" />
-    <state x="2869" y="0" width="982" height="1091" maximized="true" key="dock-window-4" timestamp="1608211464792">
+    <state x="2869" y="0" width="982" height="1091" key="dock-window-4" timestamp="1608212218351">
       <screen x="2880" y="0" width="1920" height="1080" />
     </state>
-    <state x="2869" y="0" width="982" height="1091" maximized="true" key="dock-window-4/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211464792" />
+    <state x="2869" y="0" width="982" height="1091" key="dock-window-4/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608212218351" />
     <state x="601" y="161" width="427" height="537" key="ftp.server.browser" timestamp="1607591347193">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -345,9 +346,10 @@
     <SUITE FILE_PATH="coverage/few_shot_image_classification$mtl_meta_eval.coverage" NAME="mtl_meta_eval Coverage Results" MODIFIED="1607943991799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/meta-transfer-learning" />
     <SUITE FILE_PATH="coverage/few_shot_image_classification$resnet12_mtl.coverage" NAME="resnet12_mtl Coverage Results" MODIFIED="1607747238106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/meta-transfer-learning/models" />
     <SUITE FILE_PATH="coverage/few_shot_image_classification$mtl_pre.coverage" NAME="mtl_pre Coverage Results" MODIFIED="1608201019691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/meta-transfer-learning" />
+    <SUITE FILE_PATH="coverage/few_shot_image_classification$mtl_meta_eval_resnet12_miniimagenet_5_shot.coverage" NAME="mtl_meta_eval_resnet12_miniimagenet_5_shot Coverage Results" MODIFIED="1608213392125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/meta-transfer-learning" />
     <SUITE FILE_PATH="coverage/few_shot_image_classification$main.coverage" NAME="mtl_main Coverage Results" MODIFIED="1607677368172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/meta-transfer-learning" />
     <SUITE FILE_PATH="coverage/few_shot_image_classification$run_pre.coverage" NAME="run_pre Coverage Results" MODIFIED="1607685249190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/meta-transfer-learning" />
-    <SUITE FILE_PATH="coverage/few_shot_image_classification$mtl_meta_train.coverage" NAME="mtl_meta_train_resnet12_miniimagenet_5_shot Coverage Results" MODIFIED="1608211734266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/meta-transfer-learning" />
+    <SUITE FILE_PATH="coverage/few_shot_image_classification$mtl_meta_train.coverage" NAME="mtl_meta_train_resnet12_miniimagenet_5_shot Coverage Results" MODIFIED="1608211778842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/meta-transfer-learning" />
     <SUITE FILE_PATH="coverage/few_shot_image_classification$resnet_mtl.coverage" NAME="resnet_mtl Coverage Results" MODIFIED="1608197795269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/meta-transfer-learning/models" />
   </component>
 </project>
