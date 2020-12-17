@@ -18,12 +18,12 @@ from trainer.pre import PreTrainer
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     # Basic parameters
-    parser.add_argument('--model_type', type=str, default='ResNet', choices=['ResNet']) # The network architecture
-    parser.add_argument('--dataset', type=str, default='FC100', choices=['miniImageNet', 'tieredImageNet', 'FC100']) # Dataset
+    parser.add_argument('--model_type', type=str, default='ResNet18', choices=['ResNet', 'ResNet18']) # The network architecture
+    parser.add_argument('--dataset', type=str, default='MiniImageNet', choices=['MiniImageNet', 'tieredImageNet', 'FC100']) # Dataset
     parser.add_argument('--phase', type=str, default='meta_train', choices=['pre_train', 'meta_train', 'meta_eval']) # Phase
     parser.add_argument('--seed', type=int, default=0) # Manual seed for PyTorch, "0" means using random seed
     parser.add_argument('--gpu', default='3') # GPU id
-    parser.add_argument('--dataset_dir', type=str, default='../data/fc100/') # Dataset folder
+    parser.add_argument('--dataset_dir', type=str, default='../data/mini-imagenet/') # Dataset folder
 
     # Parameters for meta-train phase
     parser.add_argument('--max_epoch', type=int, default=100) # Epoch number for meta-train phase
@@ -45,7 +45,7 @@ if __name__ == '__main__':
     # Parameters for pretain phase
     parser.add_argument('--pre_max_epoch', type=int, default=100) # Epoch number for pre-train phase
     parser.add_argument('--pre_batch_size', type=int, default=64) # Batch size for pre-train phase
-    parser.add_argument('--pre_lr', type=float, default=0.1) # Learning rate for pre-train phase
+    parser.add_argument('--pre_lr', type=float, default=0.01) # Learning rate for pre-train phase
     parser.add_argument('--pre_gamma', type=float, default=0.2) # Gamma for the pre-train learning rate decay
     parser.add_argument('--pre_step_size', type=int, default=30) # The number of epochs to reduce the pre-train learning rate
     parser.add_argument('--pre_custom_momentum', type=float, default=0.9) # Momentum for the optimizer during pre-train

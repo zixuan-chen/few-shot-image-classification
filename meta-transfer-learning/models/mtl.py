@@ -12,6 +12,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from models.resnet12_mtl import ResNet12Mtl
+from models.resnet_mtl import resnet18
 
 
 class BaseLearner(nn.Module):
@@ -49,13 +50,21 @@ class MtlLearner(nn.Module):
         self.mode = mode
         self.update_lr = args.base_lr
         self.update_step = args.update_step
-        z_dim = 640
+
+        if args.model_type == 'ResNet':
+            self.encoderClass = ResNet12Mtl
+            z_dim = 640
+        elif args.model_type == "ResNet18":
+            self.encoderClass = resnet18
+            z_dim = 512
+        else:
+            raise Exception("Error: invalid model_type = ", args.model_type)
         self.base_learner = BaseLearner(args, z_dim)
 
         if self.mode == 'meta':
-            self.encoder = ResNet12Mtl(mtl=True)
+            self.encoder = self.encoderClass(mtl=True)
         else:
-            self.encoder = ResNet12Mtl(mtl=False)
+            self.encoder = self.encoderClass(mtl=False)
             self.pre_fc = nn.Sequential(nn.Linear(z_dim, 1000), nn.ReLU(), nn.Linear(1000, num_cls))
 
     def forward(self, inp):
@@ -94,13 +103,14 @@ class MtlLearner(nn.Module):
         Returns:
           logits_q: the predictions for the test samples.
         """
+        # data_shot_aug, label_shot_aug = API(data_shot, label_shot, num_aug, method='default')
         embedding_query = self.encoder(data_query)
         embedding_shot = self.encoder(data_shot)
         logits = self.base_learner(embedding_shot)
         loss = F.cross_entropy(logits, label_shot)
         grad = torch.autograd.grad(loss, self.base_learner.parameters())
         fast_weights = list(map(lambda p: p[1] - self.update_lr * p[0], zip(grad, self.base_learner.parameters())))
-        # logits_q = self.base_learner(embedding_query, fast_weights)
+        logits_q = self.base_learner(embedding_query, fast_weights)
 
         for _ in range(1, self.update_step):
             logits = self.base_learner(embedding_shot, fast_weights)
