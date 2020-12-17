@@ -51,6 +51,8 @@ if __name__ == '__main__':
     parser.add_argument('--pre_custom_momentum', type=float, default=0.9) # Momentum for the optimizer during pre-train
     parser.add_argument('--pre_custom_weight_decay', type=float, default=0.0002) # Weight decay for the optimizer during pre-train
 
+    # Parameter for augmentation
+    parser.add_argument('--augment', type=bool, default=False) # choice for augmentation
     # Set and print the parameters
     args = parser.parse_args()
     pprint(vars(args))

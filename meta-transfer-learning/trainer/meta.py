@@ -39,6 +39,8 @@ class MetaTrainer(object):
             '_batch' + str(args.num_batch) + '_maxepoch' + str(args.max_epoch) + \
             '_baselr' + str(args.base_lr) + '_updatestep' + str(args.update_step) + \
             '_stepsize' + str(args.step_size) + '_' + args.meta_label
+        if args.augment:
+            save_path2 += '_augment'
         args.save_path = meta_base_dir + '/' + save_path1 + '_' + save_path2
         ensure_path(args.save_path)
 

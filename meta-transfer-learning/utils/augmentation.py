@@ -13,6 +13,7 @@ import numpy as np
 import cv2 as cv
 import random
 
+
 def rotate_bound_black_bg(image, angle):
     (h, w) = image.shape[:2]
     (cX, cY) = (w // 2, h // 2)
@@ -23,15 +24,16 @@ def rotate_bound_black_bg(image, angle):
     nH = int((h * cos) + (w * sin))
     M[0, 2] += (nW / 2) - cX
     M[1, 2] += (nH / 2) - cY
-    return cv.warpAffine(image, M, (nW, nH),borderValue=(0,0,0))
+    return cv.warpAffine(image, M, (nW, nH), borderValue=(0, 0, 0))
     # return cv2.warpAffine(image, M, (nW, nH))
 
-def dataAugmentation(input_pic, input_label, method = 'Trans'):
-    #TODO: input_pic [N, C, H, W], input_label [N]
+
+def dataAugmentation(input_pic, input_label, method='Trans'):
+    # TODO: input_pic [N, C, H, W], input_label [N]
     # N = N
     h, w, c = input_pic.shape
     output, label = [input_pic], [input_label]
-    if method == "Trans":                    #平移
+    if method == "Trans":  # 平移
         transH = [h // 10, h // 5]
         transW = [w // 10, w // 5]
         for i in transH:
@@ -58,7 +60,7 @@ def dataAugmentation(input_pic, input_label, method = 'Trans'):
                 newImage[:, j, :] = newImage[:, i, :]
             output.append(newImage)
             label.append(input_label)
-    elif method == "Rotate":                 #翻转及旋转
+    elif method == "Rotate":  # 翻转及旋转
         for i in [-6, -3, 3, 6]:
             newImage = rotate_bound_black_bg(input_pic, i)
             newH, newW = newImage.shape[:2]
@@ -74,7 +76,7 @@ def dataAugmentation(input_pic, input_label, method = 'Trans'):
             outputImage = newImage[newH // 2 - h // 2: newH // 2 + h // 2, newW // 2 - w // 2: newW // 2 + w // 2, :]
             output.append(outputImage)
             label.append(input_label)
-    elif method == "Scale":                  #缩放
+    elif method == "Scale":  # 缩放
         for i in [0.1, 0.2, 0.3]:
             newH, newW = int(h * (1 + i)), int(w * (1 + i))
             newImage = cv.resize(input_pic, (newH, newW))

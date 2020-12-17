@@ -35,7 +35,7 @@
       <recent name="C:\Users\ChenZixuan\Desktop\few-shot-image-classification\meta-transfer-learning\utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mtl_meta_train">
+  <component name="RunManager" selected="Python.mtl_meta_train_resnet12_miniimagenet_5_shot">
     <configuration name="mtl_meta_eval" type="PythonConfigurationType" factoryName="Python">
       <module name="few-shot-image-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -58,7 +58,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mtl_meta_train" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="mtl_meta_train_resnet12_miniimagenet_5_shot" type="PythonConfigurationType" factoryName="Python">
       <module name="few-shot-image-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,7 +72,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/meta-transfer-learning/main.py" />
-      <option name="PARAMETERS" value="--phase meta_train" />
+      <option name="PARAMETERS" value="--phase meta_train --dataset MiniImageNet --shot 5 --model_type ResNet --augment 1" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -169,7 +169,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.mtl_meta_train" />
+      <item itemvalue="Python.mtl_meta_train_resnet12_miniimagenet_5_shot" />
       <item itemvalue="Python.mtl_meta_eval" />
       <item itemvalue="Python.mtl_pre" />
       <item itemvalue="Python.resnet12_mtl" />
@@ -201,7 +201,7 @@
       <workItem from="1607846026889" duration="8643000" />
       <workItem from="1607943881150" duration="872000" />
       <workItem from="1608115598258" duration="1240000" />
-      <workItem from="1608185332664" duration="21535000" />
+      <workItem from="1608185332664" duration="22405000" />
     </task>
     <servers />
   </component>
@@ -213,12 +213,12 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="371" y="106" key="#Options/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1607591506974" />
-    <state x="97" y="29" width="1086" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607902569507">
+    <state x="48" y="43" width="1086" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608211040283">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="-2783" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2880.156.1440.870/0.0.2560.1400@-2880.156.1440.870" timestamp="1607818500981" />
     <state x="1022" y="528" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2880.156.1440.870/0.0.2560.1400@0.0.2560.1400" timestamp="1607747648669" />
-    <state x="97" y="29" width="1086" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1607902569507" />
+    <state x="48" y="43" width="1086" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211040283" />
     <state x="3009" y="36" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860/2880.0.1920.1080@2880.0.1920.1080" timestamp="1607863307945" />
     <state x="3570" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607861941777">
       <screen x="2880" y="0" width="1920" height="1080" />
@@ -330,10 +330,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="275" y="0" width="1177" height="846" key="dock-window-3/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608208179908" />
-    <state x="2869" y="0" width="982" height="1091" key="dock-window-4" timestamp="1608210255323">
+    <state x="2869" y="0" width="982" height="1091" maximized="true" key="dock-window-4" timestamp="1608211132478">
       <screen x="2880" y="0" width="1920" height="1080" />
     </state>
-    <state x="2869" y="0" width="982" height="1091" key="dock-window-4/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608210255323" />
+    <state x="2869" y="0" width="982" height="1091" maximized="true" key="dock-window-4/0.0.1440.860/2880.0.1920.1080@0.0.1440.860" timestamp="1608211132478" />
     <state x="601" y="161" width="427" height="537" key="ftp.server.browser" timestamp="1607591347193">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
