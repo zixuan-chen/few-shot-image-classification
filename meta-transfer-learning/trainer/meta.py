@@ -164,6 +164,8 @@ class MetaTrainer(object):
                     data = batch[0]
                 p = self.args.shot * self.args.way
                 data_shot, data_query = data[:p], data[p:]
+                print(data_shot.shape)
+                print(label_shot.shape)
                 # Output logits for model
                 logits = self.model((data_shot, label_shot, data_query))
                 # Calculate meta-train loss

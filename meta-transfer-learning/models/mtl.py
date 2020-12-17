@@ -13,7 +13,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from models.resnet12_mtl import ResNet12Mtl
 from models.resnet_mtl import resnet18
-
+from utils.augmentation import dataAugmentation
 
 class BaseLearner(nn.Module):
     """The class for inner loop."""
@@ -94,7 +94,7 @@ class MtlLearner(nn.Module):
         """
         return self.pre_fc(self.encoder(inp))
 
-    def meta_forward(self, data_shot, label_shot, data_query):
+    def meta_forward(self, data_shot, label_shot, data_query, augment=False):
         """The function to forward meta-train phase.
         Args:
           data_shot: train images for the task
@@ -102,8 +102,11 @@ class MtlLearner(nn.Module):
           data_query: test images for the task.
         Returns:
           logits_q: the predictions for the test samples.
+          :param augment:
         """
-        # data_shot_aug, label_shot_aug = API(data_shot, label_shot, num_aug, method='default')
+        if augment:
+            data_shot, label_shot = dataAugmentation(data_shot, label_shot, method='Trans')
+
         embedding_query = self.encoder(data_query)
         embedding_shot = self.encoder(data_shot)
         logits = self.base_learner(embedding_shot)
@@ -120,7 +123,7 @@ class MtlLearner(nn.Module):
             logits_q = self.base_learner(embedding_query, fast_weights)
         return logits_q
 
-    def preval_forward(self, data_shot, label_shot, data_query):
+    def preval_forward(self, data_shot, label_shot, data_query, augment=False):
         """The function to forward meta-validation during pretrain phase.
         Args:
           data_shot: train images for the task
@@ -129,6 +132,8 @@ class MtlLearner(nn.Module):
         Returns:
           logits_q: the predictions for the test samples.
         """
+        if augment:
+            data_shot, label_shot = dataAugmentation(data_shot, label_shot, method='Trans')
         embedding_query = self.encoder(data_query)
         embedding_shot = self.encoder(data_shot)
         logits = self.base_learner(embedding_shot)
