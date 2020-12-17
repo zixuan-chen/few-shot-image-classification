@@ -105,7 +105,8 @@ class MtlLearner(nn.Module):
           :param augment:
         """
         if augment:
-            data_shot, label_shot = dataAugmentation(data_shot, label_shot, method='Trans')
+            # data_shot, label_shot = dataAugmentation(data_shot, label_shot, method='Trans')
+            pass
 
         embedding_query = self.encoder(data_query)
         embedding_shot = self.encoder(data_shot)
@@ -133,7 +134,8 @@ class MtlLearner(nn.Module):
           logits_q: the predictions for the test samples.
         """
         if augment:
-            data_shot, label_shot = dataAugmentation(data_shot, label_shot, method='Trans')
+            # data_shot, label_shot = dataAugmentation(data_shot, label_shot, method='Trans')
+            pass
         embedding_query = self.encoder(data_query)
         embedding_shot = self.encoder(data_shot)
         logits = self.base_learner(embedding_shot)
