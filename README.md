@@ -9,6 +9,7 @@ few shot image classification
 |         | Transport| 0.5342 + 0.0085 | 0.6903 + 0.0070 | 0.4007 + 0.0079 |
 |         | Rotation| 0.5359 + 0.0083 | 0.6858 + 0.0067 |
 | ResNet18| None     | 0.4632 + 0.0077| 0.6618 + 0.0069 | 
+|         | Transport |
 
 ### train command
 `cd meta-transfer-learning`
