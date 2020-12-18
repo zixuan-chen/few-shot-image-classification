@@ -3,18 +3,11 @@ few shot image classification
 
 ### Experiment Result
 
-#### Without Augmentation
-| model | mini 1-shot | mini 5-shot | FC100 1-shot | FC100 5-shot |
-| ----  | ----        | ----        | ----         | ----         |  
-| ResNet12| 0.5328 + 0.0080| 0.6857 + 0.0070 | 0.3922 + 0.0071 | 0.5153 + 0.0070 | 
-| ResNet18| 0.4632 + 0.0077| 0.6618 + 0.0069 | 
-
-#### With Augmentation
 | model | Aug method |mini 1-shot | mini 5-shot | FC100 1-shot | FC100 5-shot |
 | ----  | ----       |----        | ----        | ----         | ----         |  
-| ResNet12|
+| ResNet12| None     | 0.5328 + 0.0080| 0.6857 + 0.0070 | 0.3922 + 0.0071 | 0.5153 + 0.0070 | 
 |         | Transport| 0.5342 + 0.0085 |
-| ResNet18|
+| ResNet18| None     | 0.4632 + 0.0077| 0.6618 + 0.0069 | 
 
 ### train command
 `cd meta-transfer-learning`
