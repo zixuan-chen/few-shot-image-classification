@@ -10,10 +10,10 @@ few shot image classification
 | ResNet18| 0.4632 + 0.0077| 0.6618 + 0.0069 | 
 
 #### With Augmentation
-| model | mini 1-shot | mini 5-shot | FC100 1-shot | FC100 5-shot |
-| ----  | ----        | ----        | ----         | ----         |  
+| model | Aug method |mini 1-shot | mini 5-shot | FC100 1-shot | FC100 5-shot |
+| ----  | ----       |----        | ----        | ----         | ----         |  
 | ResNet12|
-| Transport | 0.5342 + 0.0085 |
+|         | Transport| 0.5342 + 0.0085 |
 | ResNet18|
 
 ### train command
