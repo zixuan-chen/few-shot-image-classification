@@ -10,6 +10,7 @@ Output:
 '''
 
 import numpy as np
+import torch
 import cv2 as cv
 import random
 
@@ -29,6 +30,8 @@ def rotate_bound_black_bg(image, angle):
 
 def dataAugmentation(input_pics, input_labels, method = 'Trans'):
     output, label = [], []
+    input_pics = input_pics.numpy()
+    input_labels = input_labels.numpy()
     for k in range(len(input_pics)):
         input_pic = input_pics[k]
         input_label = input_labels[k]
@@ -105,4 +108,4 @@ def dataAugmentation(input_pics, input_labels, method = 'Trans'):
                 outputImage = np.transpose(outputImage, (2, 0 ,1))
                 output.append(outputImage)
                 label.append(input_label)
-    return output, label
+    return torch.from_numpy(np.array(output)), torch.from_numpy(np.array(label))
